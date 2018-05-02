@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(60, 141, 207);
+}
+
+.navbar {
+    border-bottom: #093fa5 solid;
+    
+}
+
+.container {
+    -webkit-box-shadow: -5px 5px 50px rgba(0, 0, 0, 0.5);
+    -mox-box-shadow: -5px 5px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: -5px 5px 50px rgba(0, 0, 0, 0.5);
+}
+
+.card{
+    -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+    -mox-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+}
