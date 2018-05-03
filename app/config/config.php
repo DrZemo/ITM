@@ -3,7 +3,7 @@
 define('DB_HOTS','localhost');
 define('DB_USER','root');
 define('DB_PASS','');
-define('DB_NAME','pruebas');
+define('DB_NAME','itm');
 
 //ruta de la aplicaicon 
 define('RUTA_APP',dirname(dirname(__FILE__)));

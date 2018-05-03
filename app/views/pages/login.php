@@ -1,5 +1,6 @@
 <?php require_once '../app/views/includes/head.php'; ?>
-<form action="/ITM/HOME">
+<?php require_once '../app/views/includes/nav.php'; ?>
+<form action="/ITM/LOGIN/iniciarSeccion" method="post">
     <div class="modal-dialog" role="document">
         <div class="container modal-content">
 
@@ -9,9 +10,9 @@
             </div>
             
             <div class="modal-body">
-                <input class="form-control" type="text" name="usuario" placeholder="usuario">
+                <input class="form-control" type="text" name="cedula" placeholder="cedula usuario" required>
                 <br>
-                <input class="form-control" type="password" name="conraseña" placeholder="contraseña">
+                <input class="form-control" type="password" name="contraseña" placeholder="contraseña" required>
                 <br>
             </div>
 

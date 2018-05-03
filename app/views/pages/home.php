@@ -5,6 +5,6 @@
     
 
     <?php require_once '../app/views/includes/footer.php'; ?>
-    <?php echo __FILE__;?>
+    <!--- <?php // echo $datos['username']->nombres; ?> --->
 
     

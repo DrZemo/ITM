@@ -56,7 +56,6 @@ class DataBase{
     }
 
     //obtener registros 
-
     public function registros(){
         $this->ejecutar();
         return $this->sttmt->fetchAll(PDO::FETCH_OBJ);
@@ -71,5 +70,6 @@ class DataBase{
         $this->ejecutar();
         return $this->sttmt->rowCount();
     }
+
 }
 ?>

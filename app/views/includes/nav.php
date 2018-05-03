@@ -1,3 +1,6 @@
+<?php 
+session_start(); 
+?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">
     <img src="img/Logo-ITM-01.png" width="80px;" alt="Responsive image">
@@ -14,25 +17,32 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
-    <div class="form-inline my-2 my-lg-0">
-      <p><?php if (!empty($datos)) {
-        echo $datos['user'];
-      }  ?></p>
+    <div class="form-inline  mx-auto">
+      <?php
+      if(isset($_SESSION['user'])){
+        ?>
+        <div class="dropdown">
+          <button class="btn  btn-info  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <?php echo (!empty($_SESSION['user']) ? $_SESSION['user'] : "Usuario");?>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="/ITM/LOGIN/cerrarSeccion">Cerrar session</a>
+          </div>
+        </div>
+        <?php
+      }else{
+        ?>
+        <a href="/ITM/LOGIN"  class="btn btn-success"> 
+        iniciar seccion
+        <i class="fas fa-sign-out-alt"></i>
+        </a>
+        <?php
+      }
+      ?>
     </div>
   </div>
 </nav>

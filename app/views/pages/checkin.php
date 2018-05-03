@@ -1,5 +1,5 @@
 <?php require_once '../app/views/includes/head.php'; ?>
-<form action="/ITM/home" method="post">
+<form action="/ITM/CHECKIN/registrarDatos" method="post">
 <div>
     <div class="container mt-5 modal-content">
         <div class="modal-header">
@@ -9,10 +9,10 @@
         <div class="modal-body">
             <div class="form-row">
                 <div class="col-5">
-                    <input name="nombres" type="text" class="form-control border" placeholder="nombres">
+                    <input name="nombres" type="text" class="form-control border" placeholder="nombres" required>
                 </div>
                 <div class="col-5">
-                    <input name="apellidos" type="text" class="form-control border" placeholder="apellidos">
+                    <input name="apellidos" type="text" class="form-control border" placeholder="apellidos" required>
                 </div>
                 <div class="col-2">
                     <input name="edad" type="number" class="form-control border" placeholder="edad">
@@ -21,13 +21,13 @@
             <br>
             <div class="form-row">
                 <div class="col-5">
-                    <input name="direccion" type="text" class="form-control border" placeholder="direccion">
+                    <input name="direccion" type="text" class="form-control border" placeholder="direccion" required>
                 </div>
                 <div class="col-5">
-                    <input name="email" type="email" class="form-control border" placeholder="email@example.com">
+                    <input name="email" type="email" class="form-control border" placeholder="email@example.com" required>
                 </div>
                 <div class="col-2">
-                <input class="form-control" type="text" placeholder="Cedula">
+                <input name="cedula" class="form-control" type="text" placeholder="Cedula" required>
                 </div>
             </div>
             <br>
@@ -37,7 +37,7 @@
                     <input name="contraseña" type="password" class="form-control border" placeholder="contraseña">
                 </div>
                 <div class="col-5">
-                    <input name="contraseña" type="password" class="form-control border" placeholder="contraseña">
+                    <input name="confirmarContraseña" type="password" class="form-control border" placeholder="confirmar contraseña">
                 </div>
             </div>
         </div>

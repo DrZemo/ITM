@@ -1,7 +1,7 @@
 <?php
 class Sessions{
 
-    public function __construct(){
+    public function init(){
         session_start();
     }
   /**
@@ -44,6 +44,7 @@ class Sessions{
      */
     public function close()
     {
+        session_start();
         session_unset();
         session_destroy();
     }
