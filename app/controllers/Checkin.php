@@ -33,9 +33,10 @@ class Checkin extends Controller{
 
         if ($contraseña == $confirmarContraseña) {
             $this->modeloChiecin->crearUsuario($cedula,$nombres,$apellidos,$contraseña,$email,$direccion,$edad);
-            header('Location: /ITM/HOME');
+            $this->view('/pages/login');
         }else{
-            header('Location: /ITM/HOME');
+            //include '../public/css/styles.css';
+            $this->view('/pages/home');
         }
         
     }

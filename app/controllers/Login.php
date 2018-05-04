@@ -16,14 +16,15 @@ class Login extends Controller{
         $usuario = $this->modeloLogin->validarUsuario($cedula,$contraseña);
         $this->session->init();
         $this->session->add('user',$usuario->nombres);
-        header('Location: /ITM/HOME');
         var_dump($this->session->getAll());
-        //$this->view('/pages/home');
+        $this->view('/pages/home');
     }
 
     public function cerrarSeccion(){
         $this->session->close();
-        header('Location: /ITM/HOME');
+        //require_once '../../public/css/styles.css';
+        $this->view('/ITM/HOME');
+        //header('Location: /ITM/HOME');
     }
     
 }
